@@ -1,4 +1,4 @@
-package ru.sbt.classes;
+package ru.sbt.hw4.classes;
 
 import java.util.Map;
 

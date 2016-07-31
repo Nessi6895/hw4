@@ -1,7 +1,7 @@
 package ru.sbt;
 
-import ru.sbt.classes.CountMap;
-import ru.sbt.classes.CountMapImpl;
+import ru.sbt.hw4.classes.CountMap;
+import ru.sbt.hw4.classes.CountMapImpl;
 
 /**
  * Created by Артем on 31.07.2016.
