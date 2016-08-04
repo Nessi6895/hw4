@@ -1,4 +1,4 @@
-package ru.sbt;
+package ru.sbt.hw4;
 
 import ru.sbt.hw4.classes.CountMap;
 import ru.sbt.hw4.classes.CountMapImpl;
@@ -30,7 +30,6 @@ public class Main {
         map1.add(1);
 
         map.addAll(map1);
-
-        System.out.println(map.getCount(1));
+        
     }
 }

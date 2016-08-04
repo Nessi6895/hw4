@@ -30,19 +30,19 @@ public class CountMapImpl<T> implements CountMap<T> {
     }
 
     @Override
-    public void addAll(CountMap<T> cm) {
-        for (T key : cm.toMap().keySet()){
-            map.put(key, map.get(key) == null ? cm.getCount(key) : map.get(key) + cm.getCount(key));
+    public void addAll(CountMap<? extends T> cm) { // added PECS rule
+        for (T o : cm.toMap().keySet()){
+            this.add(o);
         }
     }
 
     @Override
-    public Map<T, Integer> toMap() {
-        return this.map;
-    }
+    public Map<? extends T, Integer> toMap() {
+        return new HashMap<>(map);
+    } //not returning old map anymore
 
     @Override
-    public void toMap(Map destination) {
-        destination = this.map;
-    }
+    public void toMap(Map<? extends T, Integer> destination) {
+        destination = new HashMap<>(map);
+    } //not assigning to old map anymore
 }

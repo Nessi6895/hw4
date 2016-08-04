@@ -12,10 +12,10 @@ public interface CountMap<T> {
 
     int size();
 
-    void addAll(CountMap<T> cm);
+    void addAll(CountMap<? extends T> cm);
 
-    Map<T, Integer> toMap();
+    Map<? extends T, Integer> toMap();
 
-    void toMap(Map destination);
+    void toMap(Map<? extends T, Integer> destination);
 
 }
